@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="public/style.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <title>Zenmoov exercice</title>
+</head>
+
+<body ng-app="connexion" ng-controller="myController">
+
+    <div class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Accueil</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+            aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="navbar-nav mr-auto" style="justify-content: flex-end; width: 100%;">
+                <li class="nav-item">
+                    <a class="nav-link" href="/connexion">Se connecter</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--   FORMULAIRE DE CONNEXION   -->
+    <div class="formulaire" id="formulaire-connexion">
+        <form ng-submit="connexionForm()">
+            <div class="form-group div-largeur">
+                <label class="blockquote" for="email">Courriel</label>
+                <input type="text" class="form-control" id="email" placeholder="azerty@gmail.com"
+                    name="email" ng-model="connexion.email">
+            </div>
+            <div class="form-group">
+                <label class="blockquote" for="password">Mot de passe</label>
+                <input type="password" class="form-control input-size" id="password" placeholder="mot de passe"
+                    name="password" ng-model="connexion.password">
+            </div>
+            <input id="connexion" type="submit" value="Connexion" class="btn btn-outline-success btn-size">
+            <button type="button" class="btn btn-link" ng-click="annuler()">Annuler</button>
+        </form>
+    </div>
+
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
